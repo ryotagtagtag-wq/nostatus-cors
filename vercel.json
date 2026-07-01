@@ -1,5 +1,16 @@
 {
   "rewrites": [
-    { "source": "/:path*", "destination": "https://c-stellar.net*" }
+    {
+      "source": "/api/nrelay/:path*",
+      "destination": "https://nrelay-proxy.ryotagtagtag.workers.dev/api/nrelay/:path*"
+    },
+    {
+      "source": "/api/songdata/:path*",
+      "destination": "https://nrelay-proxy.ryotagtagtag.workers.dev/api/songdata/:path*"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
   ]
 }
